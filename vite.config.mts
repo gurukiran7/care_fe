@@ -218,16 +218,8 @@ export default defineConfig(({ mode }) => {
         enable:
           env.NODE_ENV === "development" && env.ENABLE_REACT_SCAN === "true",
       }),
-      checker({
-        typescript: true,
-        eslint: {
-          useFlatConfig: true,
-          lintCommand: "eslint ./src",
-          dev: {
-            logLevel: ["error"],
-          },
-        },
-      }),
+
+     
       treeShakeCareIcons({
         iconWhitelist: ["default"],
       }),
