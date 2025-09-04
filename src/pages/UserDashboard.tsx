@@ -1,4 +1,10 @@
-import { ChevronRight, LogOut, SquarePen, User2Icon } from "lucide-react";
+import {
+  ChevronRight,
+  LogOut,
+  SquarePen,
+  User2Icon,
+  Users2Icon,
+} from "lucide-react";
 import { Link } from "raviger";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -88,7 +94,25 @@ export default function UserDashboard() {
             </p>
           </div>
         </div>
+
         <div className="flex flex-col gap-2 w-full sm:flex-row sm:items-center sm:w-auto">
+          <div className="flex ">
+            <Button
+              variant="outline"
+              size="sm"
+              className="w-auto min-w-max"
+              asChild
+              data-cy="HR-dashboard-button"
+            >
+              <Link
+                href="/hrm/dashboard"
+                className="gap-2 text-inherit flex items-center"
+              >
+                <Users2Icon className="size-4" />
+                HR Dashboard
+              </Link>
+            </Button>
+          </div>
           {user.is_superuser && (
             <Button
               variant="outline"

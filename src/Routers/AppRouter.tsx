@@ -28,12 +28,11 @@ import { PlugConfigEdit } from "@/pages/Apps/PlugConfigEdit";
 import { PlugConfigList } from "@/pages/Apps/PlugConfigList";
 import UserDashboard from "@/pages/UserDashboard";
 
-// List of paths and patterns where the sidebar should be hidden
 const PATHS_WITHOUT_SIDEBAR = [
-  // Exact matches
   "/",
   "/session-expired",
-  // Pattern matches (using regex)
+  "/hrm",
+  /^\/hrm(\/.*)?$/,
   /^\/facility\/[^/]+\/services_requests\/[^/]+$/,
   /^\/facility\/[^/]+\/locations\/[^/]+\/internal_transfers\/to_receive\/[^/]+$/,
   /^\/facility\/[^/]+\/locations\/[^/]+\/internal_transfers\/to_dispatch\/[^/]+$/,
